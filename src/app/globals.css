@@ -24,3 +24,56 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ===== Nexora Digital: Motion & Visual Polish ===== */
+
+@keyframes nexora-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nexora-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+main > section {
+  animation: nexora-fade-up 0.7s ease both;
+}
+
+main > section:nth-of-type(2) { animation-delay: 0.08s; }
+main > section:nth-of-type(3) { animation-delay: 0.16s; }
+main > section:nth-of-type(4) { animation-delay: 0.24s; }
+main > section:nth-of-type(5) { animation-delay: 0.32s; }
+
+main article,
+main [class*="card"] {
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+main article:hover,
+main [class*="card"]:hover {
+  transform: translateY(-5px);
+}
+
+button, a {
+  transition: color 0.25s ease, background-color 0.25s ease,
+    border-color 0.25s ease, opacity 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
