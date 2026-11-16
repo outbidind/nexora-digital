@@ -133,10 +133,10 @@ export default function Home() {
           Let&apos;s create something <span className="text-cyan-400">meaningful.</span>
         </h2>
         <p className="mt-6 text-gray-400">Have an idea? Let&apos;s start a conversation.</p>
-        <a href="mailto:hello@nexoradigital.example" className="mt-10 inline-flex rounded-full bg-cyan-400 px-8 py-4 font-bold text-slate-950 transition hover:bg-white">
+        <a href="/contact" className="mt-10 inline-flex rounded-full bg-cyan-400 px-8 py-4 font-bold text-slate-950 transition hover:bg-white">
           Get In Touch ↗
         </a>
-        <p className="mt-4 text-xs text-gray-500">Demo contact address — replace before launch.</p>
+        
       </section>
 
       <footer className="border-t border-white/10">
@@ -148,5 +148,6 @@ export default function Home() {
     </main>
   );
 }
+
 
 
